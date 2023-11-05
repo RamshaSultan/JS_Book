@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT-49-52</title>
+</head>
+<body>
+
+  <h1>Assignment -49-52</h1>
+  <form onsubmit="formsubmission(event)">
+
+    <!-- <form onsubmit=" event.preventDefault(); return  formsubmission()"> -->
+      <h1>REGISTRATION FORM</h1>
+        <label for="username">Name</label>
+        <input required title="Use 3 capital letters" placeholder="name" pattern="[A-Z]{3}" type="text" name="username" id="username"  onblur="this.style.backgroundColor='white'" onfocus="this.style.backgroundColor= 'gray'">
+        <!-- <input type="password" name="" id=""> -->
+    <br></br>
+    <label for="useremail">Email</label>
+        <input type="email" name="email" placeholder="Email" id="useremail"onblur="this.style.backgroundColor='white'" onfocus="this.style.backgroundColor= 'gray'">
+        <br></br>
+        <label for="password">Password</label>
+        <input required title="Use atleast 8 charcaters (upper case, lower case, numbers)" pattern="[A-z-0-9]{8}" type="password" id="p" placeholder="Password"  onblur="this.style.backgroundColor='white'" onfocus="this.style.backgroundColor= 'gray'">
+        <br></br>
+        <label for="Date of birth">Date of Birth</label>
+        <input type="date"  placeholder="Date of birth" onblur="this.style.backgroundColor='white'" onfocus="this.style.backgroundColor= 'gray'">
+        <br></br>
+        <input type="submit">
+    </form>
+    
+    </body>
+    <script>
+    function formsubmission(e){
+       e.preventDefault()
+       var email = document.getElementById('email').value
+       console.log(email)
+    }
+    </script>
+
+  <!-- 2. Suppose in your webpage there is content area in which 
+  you have entered your item details, but user can only see 
+  some details on first look. When user clicks on “Read 
+  more” button, full detail of that particular item will be 
+  displayed. -->
+<p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+<button onclick="readMore()">Read More</button>
+
+<script>
+  function readMore() {
+ document.getElementById('para').innerText += 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel ex deserunt dolore atque unde. Praesentium, dolorum. Placeat ipsa nulla cupiditate minima ducimus tempore nostrum nihil, libero adipisci assumenda corrupti aut voluptate, deserunt praesentium molestiae odio, obcaecati modi quis. Autem inventore magnam totam fuga quisquam aspernatur harum doloribus incidunt quasi!'
+  }
+</script>
+
+<!-- 3. In previous assignment you have created a tabular data 
+using javascript. Let’s modify that. Create a form which 
+takes student’s details and show each student detail in 
+table. Each row of table must contain a delete button and 
+an edit button. On click on delete button entire row should 
+be deleted. On click on edit button, a hidden form will 
+appear with the values of that row -->
+
+<table id="studentTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Roll No</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ali</td>
+      <td>34</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+
+    </tr>
+    <tr>
+      <td>Aisha</td>
+      <td>100</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+
+    </tr>
+    <tr>
+      <td>Laila</td>
+      <td>2</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+
+    </tr>
+    <tr>
+      <td>Wajiha</td>
+      <td>5</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+
+    </tr>
+    <tr>
+      <td>wahaj</td>
+      <td>10</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+
+    </tr>
+    <tr>
+      <td>Nadir</td>
+      <td>106</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+
+    </tr>
+    <tr>
+      <td>Umar</td>
+      <td>99</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+
+    </tr>
+  </tbody>
+</table>
+<script>
+  function deleteRow(btn) {
+    var row = btn.closest('tr');
+    row.remove();
+  }
+ 
+  </script>
+
+
+
+
+
+    <script src="./app.js">
+    </script>
+</body>
+</html>

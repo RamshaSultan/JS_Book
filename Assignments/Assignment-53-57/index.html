@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT-53-57</title>
+</head>
+<body>
+
+
+ <h1>Assignment -53-57</h1>
+
+<h3>ZOOM IN & OUT</h3>
+  <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<button id="zoom-in" >Zoom In</button>
+<button id="zoom-out">Zoom Out</button>
+
+
+
+    <script src="./app.js">
+    </script>
+
+	<img src="https://tse1.mm.bing.net/th?id=OIP.1vir09KKGMmJenFhohVSwAHaE7&pid=Api&P=0&h=220"width="33%" height="300px" style="position: absolute;" onclick="zoomIn(this)">
+	<div id="zoom-image" onclick="zoomOut()" >
+		<img src="https://tse4.mm.bing.net/th?id=OIP.rueIAitzdG-buj5jSvJu8gHaEo&pid=Api&P=0&h=220"width="33%" height="300px" style="position: absolute;" onclick="zoomIn(this)">
+
+	</div>
+	<script>
+		function zoomIn(img) {
+			document.getElementById("zoom-image").style.display = "block";
+			document.getElementById("zoom-image").getElementsByTagName("img")[0].src = img.src;
+		}
+		function zoomOut() {
+			document.getElementById("zoom-image").style.display = "none";
+		}
+	</script>
+
+  
+</body>
+</html>

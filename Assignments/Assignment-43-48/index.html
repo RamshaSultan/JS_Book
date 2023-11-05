@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-43-48</title>
+</head>
+<body>
+
+  <h1>Assignment -43-48</h1>
+    <!-- 1. Show an alert box on click on a link. -->
+    <h3>CLICK</h3>
+
+  <a href="https://www.linkedin.com/" onClick=>Click</a>
+  <!-- 2. Display some Mobile images in browser. On click on an 
+  image Show the message in alert to user. -->
+  <h3>IMAGE ALERT</h3>
+
+  <img src="https://tse1.mm.bing.net/th?id=OIP.-0sjXe8d0jXgqftpfc_rGwHaD4&pid=Api&P=0&h=220" onclick="alert('This is Samsung Mobile ');" width="32%" height="300px" alt="" srcset="">
+  <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6443/6443440_sd.jpg" onclick="alert('This is IPhone ');" width="32%" height="300px" alt="" srcset="">
+  <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1658756612.14548474.png" onclick="alert('This is Redmi Mobile');" width="30%" height="300px" alt="" srcset="">
+
+  <!-- 3. Display 10 student records in table and each row should contain a delete 
+button. If you click on a button to delete a record, entire row should be 
+deleted.  -->
+<h3>DELETE ROW</h3>
+
+<table id="studentTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Roll No</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ali</td>
+      <td>34</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Aisha</td>
+      <td>100</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Hafsa</td>
+      <td>2</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Huma</td>
+      <td>5</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Taha</td>
+      <td>10</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Daniyal</td>
+      <td>106</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Umar</td>
+      <td>99</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+<script>
+  function deleteRow(btn) {
+    var row = btn.closest('tr');
+    row.remove();
+  }
+  </script>
+ <!-- 4. Display an image in browser. Change the picture on mouseover and set the
+// first picture on mouseout. -->
+<h3>MOUSE OUT & OVER</h3>
+
+<img
+onMouseout="src='https://purepng.com/public/uploads/medium/purepng.com-bulbbulblightenergy-bulbbright-light-14215264853446xksr.png'" 
+onMouseover="src='https://webstockreview.net/images/lightbulb-clipart-transparent-background-17.png'"
+ src="https://purepng.com/public/uploads/medium/purepng.com-bulbbulblightenergy-bulbbright-light-14215264853446xksr.png"height="500px" alt="">
+
+ <!-- 5. Show a counter in browser. Counter should increase on click on increase 
+ button and decrease on click on decrease button. And show updated counter 
+ value in browser. -->
+  
+    <h1>Counter: <span id="counter">0</span></h1>
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+  
+    <script>
+      var counterValue = 0;
+      var counterElement = document.getElementById("counter");
+  
+      function increase() {
+        counterValue++;
+        counterElement.innerHTML = counterValue;
+      }
+  
+      function decrease() {
+        counterValue--;
+        counterElement.innerHTML = counterValue;
+      }
+    </script>
+      
+ 
+    <script src="./app.js">
+    </script>
+</body>
+</html>
